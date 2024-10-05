@@ -299,3 +299,9 @@ margin-bottom: 20px;
 
 
 }
+
+
+.plan{
+    display: flex;
+    justify-content: space-between;
+}
