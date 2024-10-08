@@ -66,3 +66,26 @@ const swiperAlbum2 = new Swiper('.swiper-album-2', {
 
     speed: 20000
 });
+
+
+
+const swiperTeam = new Swiper('.team__swiper', {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 2,
+    spaceBetween: 20,
+    centeredSlides: true,
+    initialSlide: 2,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});
