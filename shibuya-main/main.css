@@ -1,0 +1,133 @@
+*{
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body{
+    background: url(./img/bg-1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo, .burger{
+    display: none;
+
+    @media (max-width: 800px) {
+        display: block;
+    }
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 800px) {
+        /* display: none; */
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        background-color: #251607;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+
+        &.active{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    a{
+        font-size: 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+        color: #251607;
+
+        @media (max-width: 800px) {
+            color: white;
+        }
+    } 
+}
+
+.header{
+    padding: 52px 0 0;
+
+    @media (max-width: 800px) {
+        background-image: url(./img/bg-2.png);
+        background-position: center;
+        padding: 52px 0 0;
+    }
+}
+
+.hero__wrapper{
+
+    text-align: center;
+
+    p{
+        font-size: clamp(1.125rem, 1.044rem + 0.33vw, 1.375rem);
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        @media (max-width: 480px) {
+            padding: 20px 0;
+         }
+    }
+
+    img{
+        width: 100%;
+    }
+    
+    .sib{
+        /* font-size: 450px;*/
+        line-height: 1;
+        font-size: clamp(5.625rem, -1.023rem + 27.27vw, 26.25rem);
+
+        @media (max-width: 480px) {
+            padding: 20px 0 0;
+         }
+    }
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+
+        @media (max-width: 480px) {
+           justify-content: center;
+            p:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
